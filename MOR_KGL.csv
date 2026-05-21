@@ -1,0 +1,225 @@
+Equipment,Failure Scenario,Failure Classification,ATS Alarm Description,FSCADA Alarm Description,HMI Alarm,Guidelines for the Chief Controller,Local Response
+TMS,Failure of 1 TMS Central Control Unit (CCU),Minor,Train Control Minor Fault,None,Train Control Minor Fault,"• Train Entering service: Not allowed to enter service
+• Train already in service: Exit at Terminus Station",Reset CCU
+TMS,Failure of 2 TMS Central Control Unit (CCU),Major,Train Control Minor Fault,None,Train Control Major Fault,"• Train Entering service: Not allowed to enter service
+• Train already in service: Immediate Train Withdrawal from service
+• Note: Rescue Train may be required","Reset CCU. If not success, train need to be couple"
+TMS,Failure of Single Multifunction Vehicle Bus (MVB) Network,Minor,Train control equipment minor fault,None,Train control equipment minor fault,"• Train Entering service: Not allowed to enter service
+•Train already in service: Immediate Train Withdrawal from service
+•Note: Rescue Train may be required",Check on HMI and identify which equipment causing alarm appear and reset if possible
+TMS,Failure of Double Multifunction Vehicle Bus (MVB) Network,Major,Train control equipment minor fault,None,Train control equipment major fault,"• Train Entering service: Not allowed to enter service
+• Train already in service: Immediate Train Withdrawal from service
+• Note: Rescue Train may be required",Check on HMI and identify which equipment causing alarm appear and reset if possible
+Power,Loss of DC Power by Train,Major,1st alarm appear Loss of traction energy and 3AC power supply faulty 2nd alarm appear (Normally after 1 hour) Low voltage battery (Loss of DC voltage),None,Loss of Traction Energy,"• Train Entering service: Not allowed to enter service
+• Train already in service: Immediate Train Withdrawal from service
+• Note: Permanent Loss of 750VDC onboard train due to Train fault. Rescue Train may be required","Qualified train driver verify the alarm, train withdrawal at terminus station"
+Power,Failure of 1 Current Collector Shoe on 1 car on 1 side,Minor,Current collectors faulty,None,Current collectors faulty,"• Train Entering service: Not allowed to enter service
+• Train already in service: Removal at End of Single Trip (to onboard)",Qualified train driver to verify the fault at the next station upon receiving the alarm
+Power,Failure of 2 Current Collector Shoes on 1 car on 1 side,Major,Alarms on current collector system (Failure of two current collectors per side per car),None,Current collectors faulty,"• Train Entering service: Not allowed to enter service
+• Train already in service: Immediate Train Withdrawal from service
+• Note: Deploy qualified Train driver to verify the fault at the next station upon receiving the alarm",Disembark passenger and train withdrawal.
+Power,Failure of 1 Auxiliary Inverter,Minor,None,None,APS Major Fault,"• Train Entering service: Not allowed to enter service
+• Train already in service: Exit at Terminus station",None
+Power,Failure of Both Auxiliary Inverter,Major,None,None,APS Major Fault,"• Train Entering service: Not allowed to enter service
+• Train already in service: Immediate Train Withdrawal from service.","i. Single red APS alarm –Reset APS. If unsuccessful, immediate train removal . 
+ii. Both APS Failure- Reset APS.If unsuccesful, immediate train removal."
+Power,Failure of 1 Battery Charger,Minor,None,None,APS Major Fault,"• Train Entering service: Not allowed to enter service
+• Train already in service: Exit at Terminus Station",Reset APS
+Power,Failure of Both Battery Chargers,Major,None,None,APS Major Fault,"• Train Entering service: Not allowed to enter service
+• Train already in service: Immediate Train Withdrawal from service.",Reset APS
+Power,Failure of 1 Battery,Minor,None,None,Power supply control major fault,"• Train Entering service: Not allowed to enter service
+• Train already in service: Removal at Fleet Reduction
+• Note: Less priority Train",None
+Power,Failure of Both Batteries,Minor,None,None,Power supply control major fault,"• Train Entering service: Not allowed to enter service
+• Train already in service: Exit at Terminus station
+• Note: Less priority Train",None
+Power,Loss of 110 V DC Control Power,Major,None,None,Power supply control major fault,"• Train Entering service: Not allowed to enter service
+• Train already in service: Immediate Train Withdrawal from service.",None
+Traction,Loss of 1 or 2 out of 4 Traction Control Unit,Major,None,None,Traction system major fault.,"• Train Entering service: Not allowed to enter service
+• Train already in service: Removal at End of Single Trip depending on the speed. Reduces to 25kph, immediate removal",None
+Traction,Loss of 3 or 4 out of 4 Traction Control Units,Major,Traction system major fault.,None,Traction system major fault.,"• Train Entering service: Not allowed to enter service
+• Train already in service: Immediate Train Withdrawal from service.
+• Note: Rescue Train may be required if Train cannot be moved.",Disembark passenger.
+Traction,Traction Mechanical Failure caused by Mechanical Blockage preventing free rolling of one wheel or wheelset (Traction Motor/ Gear Box with Axle Blockage),Major,Blocked Axle,None,Blocked Axle,"• Train Entering service: Not allowed to enter service
+• Train already in service: Immediate Train Withdrawal with low speed
+• Note: Rescue Train may be required","i. TO to verify the alarm at HMI, disembark passenger at station and train move to pocket track or nearest exit station.
+
+ ii.TO and SO shall advise passenger waiting at the platform to board the next coming train. "
+Brake,Degraded Performance of Train Emergency Brakes Caused by Safety Loop fault,Major,Safety Loop Major Fault,Safety Loop Major Fault,Safety Loop Major Fault,"• Train Entering service: Not allowed to enter service
+• Train already in service: Immediate Train Withdrawal from service.
+• Note: if Safety Loop can be reset keep Train in service and Remove at Terminus station"," •Resettable: Driving in RM/CM to the 
+nearest stabling location.
+•Non Resettable: Activate Safety Loop 
+Bypass by follow Safety loop bypass 
+procedure  "
+Brake,Degraded Performance of Train Emergency Brakes Caused by Loss of Emergency Braking on 1 or 2 Bogie,Major,None,None,Serious fault of 1 single friction brake,"•Train Entering service: Not allowed to enter service
+•Train already in service: Immediate Train Withdrawal from service.
+•Note:Train will moving slower",Isolate the defective brake
+Brake,Degraded Performance of Train Emergency Brakes Caused by Loss of Emergency Braking on more than 2 Bogies,Major,None,None,Serious fault of friction brake,"• Train Entering service: Not allowed to enter service
+• Train already in service: Isolate the defective brake and Immediate train withdrawal from service.
+• Note:
+1. Rescue Train may be required
+2. Train will moving slower (45kph)",Isolate the defective brake
+Brake,Train Brakes Not Released Causing Train Unable to Move,Major,Friction brake does not release,None,EP brake does not release,"• Train Entering service: Not allowed to enter service
+•Train already in service: Immediate Train Withdrawal from service.
+•Note: Rescue Train may be required",Isolate the defective brake
+Brake,Train Brakes Not Released and Train is Able to Move with 5km/h,Major,Brake(s) Faulty / Friction Brakes does not release,None,EP brake does not release,"• Train Entering service: Not allowed to enter service
+•Train already in service: Immediate removal. to onboard.",Isolate the defective brake
+Brake,Failure of Service Brakes (Brake Red Alarm),Major,Brake(s) Faulty,None,Brake system major fault,"• Train Entering service: Not allowed to enter service
+•Train already in service: Immediate Train Withdrawal from service.",Disembark passenger
+Brake,Permanent Parking Brakes Failure (Unable to release in 1 or more axles),Major,None,None,Parking brake does not release,"• Train Entering service: Not allowed to enter service
+•Train already in service: qualified Train driver manually drive the Train to the nearest station and disembark passengers",Train coupling might be required
+Brake,Parking Brakes Not serviceable (Unable to apply in 1 or 2 bogies),Minor,None,None,Parking Brake does not Applied,"• Train Entering service: Not allowed to enter service
+• Train already in service: Exit at Terminus station",None
+Brake,Parking Brakes not serviceable (Unable to apply in more than 2 bogies),Minor,None,None,Parking Brake does not Applied,"•Train Entering service: Not allowed to enter service
+• Train already in service: Exit at Terminus station",None
+Brake,Brake Yellow alarm maximum on 3 bogies,Minor,Brake(s) Faulty,None,EP brake applied with warning / EP brake release with warning,"• Train Entering service: Not allowed to enter service
+•Train already in service: Exit at Terminus station",None
+Brake,Brake Yellow alarm more than 4 bogies,Minor,Brake(s) Faulty,None,EP brake applied with warning /  EP brake release with warning,"• Train Entering service: Not allowed to enter service.
+•Train already in service: Exit at Terminus station",None
+Suspension System,Failure of Primary or Secondary Suspension,Major,None,None,Brake system minor fault,"• Train Entering service: Not allowed to enter service
+•Train already in service: Immediate Train Withdrawal from service.",Disembark passenger
+Suspension System,Pressure of Secondary Suspension Out of Range,Major,Pressure of secondary suspension out of range,None,Brake system minor fault,"• Train Entering service: Not allowed to enter service
+•Train already in service: Exit at Terminus station",TO onboard until terminus station
+Train Doors,One door fails to open or close per car side,Minor,Door(s) Faulty,Door No# failure,Door is faulty,"• Train Entering service: Not allowed to enter service
+• Train already in service: Isolate the failed door (in closed position) before continuing Train service",TO to isolate faulty door
+Train Doors,Two doors fails to open or close per car side,Minor,Door isolations (Two doors per train side are locked-out),Door No# failure,Door is faulty,"• Train Entering service: Not allowed to enter service
+•Train already in service: Isolate the failed doors (in closed positions) and withdraw the Train from service at the End of the round Trip",TO to isolate faulty door
+Train Doors,More than two doors fails to open or close per car side,Major,Door(s) Faulty,None,Door is faulty,"• Train Entering service: Not allowed to enter service
+•Train already in service: Immediate Train Withdrawal from service. (subject to CC decision)",TO onboard to assist passenger
+Train Doors,All door fails to open or close per car,Major,Train Door Failed to Open / Train Doors Failed to Closed,None,Door is faulty,"• Train Entering service: Not allowed to enter service
+• Train already in service: Immediate Train Withdrawal from service.",Disembark passenger
+Train Doors,Failure/Loss of Train Door Closed and Locked Indication,Major,None,None,Door loop status is open,"•Train Entering service: Not allowed to enter service.
+•Train already in service: Immediate Train Withdrawal from service.","i. Qualify train driver Isolate failure door
+ii. TO to execute Door loop bypass 
+iii. Disembark passenger"
+Train Doors,Train doors opening while in motion,Major,Door emergency released operated / Unscheduled Vehicle Door Opening,None,Door emergency released operated,"• Train Entering service: Not allowed to enter service.
+•Train already in service: Activate the door Loop Bypass switch before withdrawing if the doors cannot be closed",Disembark passenger and immediate removal if door loop bypass switch activated.
+Train Doors,Train Doors Obstacle Detection,Minor,Train door failed to close,None,Door has detected an obstruction,"• Train Entering service: Not allowed to enter service.
+•Train already in service: Remove the obstacle before continuing Train service",Cycle door
+Auxiliary Driving Console,Auxiliary Driving Console Cover Unlock Detected,Minor,Driving Console Cover Unlock,None,Driving Console Cover Unlock,"• Train Entering service: Not allowed to enter service.
+•Train already in service: Re-lock the cover by qualified Train driver and remain in services",Verify and re-lock the driving console
+Train Coupler,Semi-permanent Coupler Failure,Major,Loss of Coupler Status,None,Not Available,"• Train Entering service: Not allowed to enter service.
+• Train already in service: Immediate Train Withdrawal from service",Disembark passenger
+Train Coupler,Automatic Coupler Failure,Minor,Loss of Coupler Status,None,Not Availabe,"• Train Entering service: Not allowed to enter service.
+•Train already in service: Exit at Terminus station",Field staff (RSD/TO) verification required to confirm condition at site.
+Axle,Locked Axle,Major,Blocked Axle,None,Blocked Axle,"• Train Entering service: Not allowed to enter service.
+•Train already in service: Immediate Train Withdrawal from service.",Disembark passenger
+Lightning,Failure of Head Lights,Minor,Headlight and Taillight in car (M1 or M2) Major fault,None,None,"• Train Entering service: Not allowed to enter service.
+•Train already in service: Removal at Fleet reduction.","Note: If more than 50% of the head lights fail, tunnel lighting should be turned on when the train is driven manually"
+Lightning,Failure of Tail Lights/Marker Light,Minor,Headlight and Taillight in car (M1 or M2) Major fault,None,None,"• Train Entering service: Not allowed to enter service.
+•Train already in service: Removal at Fleet reduction.",None
+Lightning,Failure of 50% or more of Interior lighting in 1 Car,Minor,Compartment light major fault,None,None,"• Train Entering service: Not allowed to enter service.
+•Train already in service: Exit at Terminus station",None
+Lightning,Failure of more than 50% of interior lighting in 1 Car (to be removed ),Minor,Compartment light major fault,None,None,"• Train Entering service: Not allowed to enter service.
+•Train already in service: Exit at Terminus Station.",None
+Lightning,Total Failure of Interior Lighting in at least 1 Car (to be removed),Minor,Compartment light major fault,None,None,"• Train Entering service: Not allowed to enter service.
+•Train already in service: Exit at Terminus Station.",None
+Pneumatic System,Failure of 1 Air Compressor (Air Supply System),Major,None,None,Compressor Control Major Fault Symbol: Yellow & Red symbol (minor/major),"•Train Entering service: Not allowed to enter service.
+•Train already in service: Exit at Terminus Station If MRE below 8 bar, Immediate train withdrawal from service.","Field staff to check MRE Pressure level and monitor the pressure level. TO remain on board until train exit from mainline
+
+ 8.5 – 10.5 bar (Operating condition for MRE Pressure) "
+Pneumatic System,Failure of 2 Air Compressors (Air Supply System),Major,Failure of both compressor modules,None,Compressor Control Major Fault,"•Train Entering service: Not allowed to enter service
+• Train already in service: Immediate Train Withdrawal from service.","Restart Train if required, field staff to be onboard during removal. Rescue train might be required"
+Pneumatic System,Failure of Main Air Reservoir and Hoses Pipes,Major,Failure / Degradation of Air Supply System,Main air system pressure below 6 bar,Main air system pressure below 6 bar,"• Train Entering service: Not allowed to enter service
+•Train already in service: Immediate Train Withdrawal from service.","Restart Train if required, field staff to be onboard during removal."
+Air Conditioning Unit,Failure of One Air Conditioning Unit per car (Peak/Off Peak),Minor,None,None,VAC Cooling Major Fault,"• Train Entering service: Not allowed to enter service
+•Train already in service: Removal at Fleet reduction.","Require field staff to reset, if not successful train removal at fleet reduction"
+Air Conditioning Unit,Failure of Two Air Conditioning Units per car (Peak/Off Peak),Major,None,VAC Cooling Major Fault,VAC Cooling Major Fault,"• Train Entering service: Not allowed to enter service.
+•Train already in service: Removal at End of Single Trip","Field staff to check car temperature and reset if require, if not successful train removal at End Single Trip"
+Air Conditioning Unit,Failure of Both Air Conditioning Units in 3 out of 4 Car.,Major,None,None,VAC Cooling Major Fault,"• Train Entering service: Not allowed to enter service.
+•Train already in service: Immediate Train Withdrawal from the service.","Field staff to check car temperature and reset if require, if not successful Immediate train withdrawal from the service."
+"Fire/Smoke Sensor, Heat Detector",Loss of Fire/Smoke Sensor Control Unit,Major,Smoke detection system major fault,Smoke Detection System Major Fault,Smoke Detection System Major Fault,"• Train Entering service: Not allowed to enter service
+•Train already in service: remain in service until the End of round Trip only if qualified Train driver is deployed on board",Field staff reset of smoke detection system
+"Fire/Smoke Sensor, Heat Detector",Failure of Fire/Smoke Sensor,Major,Fire Alarm Activated,Fire Alarm,Fire Alarm,"• Train Entering service: Not allowed to enter service.
+•Train already in service remain in service until the End of round Trip only if qualified Train driver is deployed on board. 
+•Note: VATO holds the Train in the next Station. OCC can verify via CCTV and may release the train.","Field staff to check and verify the alarm, reset fire alarm if require."
+"Fire/Smoke Sensor, Heat Detector",Failure of Linear Heat Detectors,Major,None,None,Underframe Fire Alarm,"• Train Entering service: Not allowed to enter service.
+•Train already in service Exit at Terminus station","Field staff to check and verify the alarm, reset fire alarm if require."
+Radio,"Failure of 1 Main Radio Channel from Train to OCC or 1TRIU, failure of OCC/BCC pre recorded PA or Live PA",Minor,None,None,Radio Major Fault,"• Train Entering service: Not allowed to enter service.
+•Train already in service: Removal at Fleet reduction.",Deploy qualified train driver to handle PA where required / Deploy TO to reset TRIU 
+Radio,Failure of Both Main Radio Channel from Train to OCC or total TRIU failure,Major,Failure of both mobile radio systems,None,Radio Major Fault,"• Train Entering service: Not allowed to enter service.
+•Train already in service: Exit at Terminus station",Deploy TO to reset TRIU
+Radio,Failure of Cab-to-Cab Communications ,Minor,None,None,None,"• Train Entering service: allowed to enter service.
+•Train already in service: remain in service.",Qualified train driver to use portable radios for communication where required
+Radio,Failure of 1 Passenger Emergency Communication Unit or Partial Failure in 1 Car,Minor,None,None,Symbol detected (bell shaped),"• Train Entering service: allowed to enter service.
+•Train already in service: remain in service.",Deploy TO to reset PEC breaker
+Radio,Total Failure of Passenger Emergency Communication for all car,Major,None,None,Symbol detected (bell shaped),"• Train Entering service: Not allowed to enter service.
+•Train already in service: Exit at Terminus Station.",Deploy qualified train driver until end of round trip/ Deploy TO to reset PEC breaker
+Radio,Failure of 1 Train-borne Radio,Minor,None,None,None,"• Train Entering service: Not allowed to enter service.
+•Train already in service: Exit at Terminus Station.",None
+Radio,Failure of Both Train-borne Radios,Major,None,None,None,"• Train Entering service: Not allowed to enter service.
+•Train already in service: Exit at Terminus Station.",None
+IPIS,"Failure of IPIS Onboard Train, including failure of 1 or more LED display panels, DRMD/LCD panels or total IPIS failure ",Minor,None,None,PIS Major Fault,"• Train Entering service: Not allowed to enter service.
+•Train already in service: Exit at Terminus station or Fleet reduction.  Use PA to provide the information to passengers","Field staff to check and verify alarm, reset ACSU, PACU & SS if require."
+CCTV,Failure of 1 CCTV Camera or CCTV in 1 Car,Minor,None,None,CCTV Minor Fault,"• Train Entering service: allowed to enter service.
+•Train already in service: remain in service.",None
+CCTV,Total CCTV Failure or Failure of FFC or RVC,Minor,None,None,CCTV Minor Fault,"• Train Entering service: Not allowed to enter service.
+•Train already in service: Removal at Fleet reduction.",None
+CCTV,Failure of Access Point Controller or Network Video Recorder,Minor,NVR Failure,None,NVR Failure,"• Train Entering service: Not allowed to enter service.
+• Train already in service: remain in service.",None
+Train Horn,Train Horn failure,Minor,None,None,Horn Major Fault,"• Train Entering service: allowed to enter service.
+•Train already in service: remain in service.",None
+Event Recorder,Failure of both Event Recorders,Minor,None,None,Data Recorder Major Fault,"• Train Entering service: Not allowed to enter service.
+•Train already in service: Removal at Fleet Reduction",None
+Obstacle Detection,Obstacle detection,Major,Obstacle detection (M1 or M2),None,Obstacle detection,"• Train Entering service: Not allowed to enter service.
+•Train already in service: Immediate Removal","Deploy qualified train driver to verify the condition at site. If it is false detection, manually activate obstacle detection bypass, immediate removal ."
+Abnormal Noise & Vibration Generated,Noise & Vibration level acceptable,Minor,None,None,None,"• Train  Entering  service:  Not   allowed  to  enter service.
+•Train   already   in   service:   Removal   at   Exit Terminus station","If  the  noise  level  is  acceptable,  continue service until the end of mission and schedule for maintenance."
+Abnormal Noise & Vibration Generated,Noise & Vibration level not acceptable,Major,None,None,None,"• Train Entering service: Not allowed to enter service
+•Train already in service:  Exit at Terminus station","Require  field  staff  to  on  board  train  during removal at terminus station
+Qualified train driver to report and clarify the condition,  subject  to  condition  to  remove train.  If  the  vibration  level  is  acceptable, continue service until the end of mission and schedule for maintenance. If qualified train driver  or  passengers  report  the  vibration level     is     unacceptable     and     causing discomfort or disturbance, withdraw the train from service immediately"
+Rollback Detection,First Time,Minor,Rollback detected,None,None,"•Train Entering service: Not allowed to enter service.
+• Train already in service:  if rollback is detected for the first time, continue with normal service and OCC monitors Train for further rollback event",None
+Rollback Detection,More than once (More than 3),Major,Rollback detected,None,None,"• Train Entering service:(Not) allowed to enter service.
+• Train already in service:Immediate Train Withdrawal from the service.
+• Note: if rollback detection is repetitive for the same Train, withdraw the Train from service","Field staff require to onboard train for 
+contingency."
+Failure of Train Wake Up,Failure of Train Wake Up,Minor,None,None,None,"• Train Entering service: Not allowed to enter service.
+•Train already in service:  N/A",Maintenance staff to check and verify the situation. 
+Failure of Train Wake Up,Train sleep at mainline and able to wake up,Minor,None,None,None,"• Train Entering service:  N/A
+•Train already in service: Wake remotely or manual intervention Exit during Fleet Reduction",Maintenance staff to check and verify the situation. 
+Failure of Train Wake Up,Train sleep at mainline more than 2 times and able to wake up,Minor,None,None,None,"• Train Entering service: N/A
+• Train already in service:  Wake remotely or manual intervention Exit during Fleet Reduction",Maintenance staff to check and verify the situation. 
+Failure of Train Wake Up,Train sleep at mainline and failed to wake up after manual intervention ,Major,None,None,None,"• Train Entering service: N/A
+•Train already in service:  Wake remotely or manual intervention and Immediate Removal from service and Train Rescue required.","Qualify train driver staff need to drive in CM, 
+if not possible drive RM, if not possible drive 
+in Cut Out mode. Rescue require (couple by Loco/ET) "
+Excessive Wheel Slip/Slide,If noise is unacceptable as reported by station staff or passengers,Minor,Excessive wheel slip/slide,None,Excessive wheel slip/slide,"• Train Entering service: Not allowed to enter service.
+•Train already in service: Exit at Terminus Station.","Note: 
+i. Monitor whether the train experiences slip/slide at the same section of the track. If yes, schedule maintenance staff to assess adhesion condition of track.
+ ii. If it is decided the train is experiencing slip/slide issues, schedule the train for maintenance
+ iii. If noise/vibration level is unacceptable, disembark passengers and withdraw the train from service at the next station"
+Train Overshoot or Undershoot,If  the train is repeatedly undershoot or  overshoot at stations  (bypass  station  more than three stations),Major,Incorrect Berth Window Inaccurate Station Stop – Short Creep/Jog Failure,None,None,"• Train Entering service: N/A
+•Train already in service: Immediate Train Withdrawal from service.",None
+Train Overshoot or Undershoot,If  the  train  is  undershooting  or overshoot  at  more  than  three stations non consecutively,Minor,Incorrect Berth Window Inaccurate Station Stop – Short Creep/Jog Failure,None,None,"• Train Entering service: N/A
+•Train already in service: remain in services.",None
+Foreign object on track,Foreign  object on  track (depending  on  the  type/size  of foreign object),Major,None,None,None,"• Train Entering service: N/A
+•Train already in service:TO verify the obstruction on the track.","TO verify the obstruction on the track. If major failure occurred, required maintenance team to attend. De-energized certain area if required"
+VATC,Single VATC  Failure  ,Minor,Loss of VATC redundancy VATC Intercom Failure,None,None,"• Train Entering service: Not allowed to enter service.
+•Train already in service: Removal at Terminus station",1st attempt to reset (remote) 2nd attempt to reset (locally) Exit terminus only if qualified train driver is deployed on board
+VATC,Double VATC Failure,Major,Train Non communicating,None,None,"•Train Entering service: Not allowed to enter service.
+•Train already in service: Immediate Train Withdrawal from service. (If able to initialize, Train remain in service)","Qualify driver to rescues by reset VATC and initialize train, qualify train driver to onboard and Exit at 
+terminus station.  "
+Loss of Driving Modes,If resetting VATC does not change the situation,Major,None,None,None,"• Train Entering service: Not allowed to enter service.
+• Train already in service: Exit at terminus station) (If able to initialize, train remain in service)",Qualify train driver to reset both VATC and initialize train.
+All train doors at APG side not open,"All train doors at APG side not open, while the APG is open",Minor,Train door failed open,None,None,"• Train Entering service: N/A
+•Train already in service: OCC to monitor Train door at next Station. if the fault persists, remote switchover VATC. if failed, Immediate Removal Train from service",Disembark passenger
+Trackside ATO,Regional Train Operation,Major,RATO Offline,None,None,"i. Verify offline status by maintenance team and TO
+ii. Send remote reset command to restart Trackside ATO
+iii. If restoration is in time before stopping, the current operating mode will be retained.","i. Maintenance team standby at all ILC station and switch machine.
+ii. TO manual driving all trains "
+Wayside - Train Communication Channel,Radio network connection,Minor,Radio Offline,None,None,"i. Reset command and/or remote reset WNRA by maintenance team.
+ii. If restoration is in time before stopping, the current operating mode will be retained.",Hard Reset WNRA by maintenance team.
+ATS,Centralized train supervision,Minor,ATS logout,None,None,"i. Reboot ATS by Maintenance Team.
+ii. If restoration is in time before stopping, the current operating mode will be retained.","i. Maintenance team standby at all ILC station or impacted stations.
+ii. Operation to regulate train movement and monitor using ILC"
+Switch Machine,Switch machine controller,Major,Switch out of Control and switch out of correspondence,None,None,"i. To verify failure through CFMS
+ii. Deploy maintenance team to troubleshoot switch machine and related equipment
+iii. Impact service delay, restore to normal peration.",Send maintenance team with appropriate protection to fix Switch Machine onsite and related equipment
+750 VDC Switchgear,Breaker failed to closed,Minor,None,None,None,"i. Bypass dedicated feeder breaker and feeder isolator.
+ii. Closed on-load isolator 89L21 / 89L31.","Maintenance technician to verify condition breaker at site: 
+i. Reset breaker and inform OCC to normalize. 
+ii. Unable to reset, remain bypass and to be attend during EP hour."
+Foreign object on track,Foreign  object on  track (depending  on  the  type/size  of foreign object),Minor,None,None,None,"• Train Entering service: N/A
+• Train already in service:  TO verify the obstruction on the track","TO verify the obstruction on the track. If major failure occurred, required maintenance team to attend. De-energized certain area if required"
