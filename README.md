@@ -1,5 +1,5 @@
 DATA SCIENCE PROJECT - FINAL YEAR PROJECT:
-DEVELOPING WEB APP USING STREAMLIT
+DEVELOPMENT OF A DIGITAL TROUBLESHOOTING GUIDE SYSTEM (TGS) TO ENHANCE THE EFFICIENCY OF RAILWAY OPERATIONS BY PROVIDING SYSTEMATIC GUIDANCE AND SOLUTIONS DURING INCIDENT MANAGEMENT
 
 This project focuses on developing a digital Troubleshooting Guide System (TGS) to improve the operational efficiency of Prasarana Malaysia Berhad railway services. Currently, troubleshooting relies heavily on manual references and the experience of operation controllers, which can lead to slower response times and inefficiencies during critical incidents.
 To address these challenges, the system integrates Natural Language Processing (NLP) with an Extract, Transform, Load (ETL) pipeline to process and clean unstructured maintenance data for accurate issue matching and root cause identification. A hybrid model combining TF-IDF and Sentence-BERT (SBERT) is used to improve recommendation accuracy, where TF-IDF supports keyword matching while SBERT provides semantic understanding of user input.
